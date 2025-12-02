@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene>
+    <VBox spacing="0" alignment="CENTER" style="-fx-padding: 0; -fx-background-color: #000000;" VBox.vgrow="ALWAYS">
+        <Region VBox.vgrow="ALWAYS"/>
+        <Label text="Mondalak Coffee POS" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #cccccc; -fx-alignment: center;"/>
+        <Region prefHeight="50" VBox.vgrow="NEVER"/>
+        <HBox alignment="CENTER" HBox.hgrow="ALWAYS" style="-fx-alignment: center;">
+            <Region HBox.hgrow="ALWAYS"/>
+            <VBox spacing="10" alignment="CENTER" maxWidth="50%" style="-fx-alignment: center;">
+                <TextField fx:id="usernameField" promptText="Username" maxWidth="Infinity" HBox.hgrow="ALWAYS"
+                          style="-fx-font-size: 14; -fx-padding: 8; -fx-background-color: #000000; -fx-text-fill: #cccccc; -fx-border-color: #333333;"/>
+                <PasswordField fx:id="passwordField" promptText="Password" maxWidth="Infinity" HBox.hgrow="ALWAYS"
+                              style="-fx-font-size: 14; -fx-padding: 8; -fx-background-color: #000000; -fx-text-fill: #cccccc; -fx-border-color: #333333;"/>
+                <Button fx:id="loginButton" text="Login" prefWidth="200" 
+                       style="-fx-background-color: #3498db; -fx-text-fill: #cccccc; -fx-font-size: 14; -fx-font-weight: bold; -fx-padding: 8;"/>
+                <Label fx:id="messageLabel" text="" style="-fx-text-fill: #ff6b6b; -fx-font-size: 12;"/>
+        </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <Region VBox.vgrow="ALWAYS"/>
+    </VBox>
+</Scene>
+
