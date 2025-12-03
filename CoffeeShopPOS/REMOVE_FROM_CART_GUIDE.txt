@@ -1,0 +1,219 @@
+═══════════════════════════════════════════════════════════════════
+             CART REMOVAL FEATURE - USER GUIDE
+═══════════════════════════════════════════════════════════════════
+
+OVERVIEW
+--------
+The cart now supports partial removal of items. You can remove all
+or just some of the quantity for any product in your cart.
+
+
+HOW IT WORKS
+------------
+
+STEP 1: Add items to cart
+┌─────────────────────────────────────────────────────────┐
+│  Product        Price     Qty    Subtotal    Remove     │
+├─────────────────────────────────────────────────────────┤
+│  Pizza         $12.99     99     $1,286.01   [Remove]   │
+│  Coffee        $3.50      5      $17.50      [Remove]   │
+│  Sandwich      $8.99      10     $89.90      [Remove]   │
+└─────────────────────────────────────────────────────────┘
+
+
+STEP 2: Click the Remove button
+┌─────────────────────────────────────────────────────────┐
+│  Product        Price     Qty    Subtotal    Remove     │
+├─────────────────────────────────────────────────────────┤
+│  Pizza         $12.99     99     $1,286.01   [Remove] ◄─ CLICK
+│  Coffee        $3.50      5      $17.50      [Remove]   │
+│  Sandwich      $8.99      10     $89.90      [Remove]   │
+└─────────────────────────────────────────────────────────┘
+
+
+STEP 3: Dialog appears
+╔═══════════════════════════════════════════════╗
+║         Remove from Cart                      ║
+╠═══════════════════════════════════════════════╣
+║                                               ║
+║  Remove: Pizza                                ║
+║                                               ║
+║  Current quantity: 99                         ║
+║  Enter quantity to remove:                    ║
+║                                               ║
+║  ┌─────────────────────┐                      ║
+║  │ 99                  │ ◄── Default value    ║
+║  └─────────────────────┘                      ║
+║                                               ║
+║            [  OK  ]  [ Cancel ]               ║
+║                                               ║
+╚═══════════════════════════════════════════════╝
+
+
+STEP 4: Enter quantity and click OK
+
+Option A - Remove SOME items (enter less than current qty):
+╔═══════════════════════════════════════════════╗
+║  ┌─────────────────────┐                      ║
+║  │ 50                  │ ◄── Enter 50         ║
+║  └─────────────────────┘                      ║
+║            [  OK  ] ◄── Click                 ║
+╚═══════════════════════════════════════════════╝
+
+Result:
+┌─────────────────────────────────────────────────────────┐
+│  Product        Price     Qty    Subtotal    Remove     │
+├─────────────────────────────────────────────────────────┤
+│  Pizza         $12.99     49     $636.51     [Remove]   │ ◄─ Reduced!
+│  Coffee        $3.50      5      $17.50      [Remove]   │
+│  Sandwich      $8.99      10     $89.90      [Remove]   │
+└─────────────────────────────────────────────────────────┘
+
+
+Option B - Remove ALL items (enter full quantity):
+╔═══════════════════════════════════════════════╗
+║  ┌─────────────────────┐                      ║
+║  │ 99                  │ ◄── Keep 99          ║
+║  └─────────────────────┘                      ║
+║            [  OK  ] ◄── Click                 ║
+╚═══════════════════════════════════════════════╝
+
+Result:
+┌─────────────────────────────────────────────────────────┐
+│  Product        Price     Qty    Subtotal    Remove     │
+├─────────────────────────────────────────────────────────┤
+│  Coffee        $3.50      5      $17.50      [Remove]   │ ◄─ Pizza gone!
+│  Sandwich      $8.99      10     $89.90      [Remove]   │
+└─────────────────────────────────────────────────────────┘
+
+
+EXAMPLES
+--------
+
+Example 1: Customer changes their mind
+  Initial:  99x Pizza in cart
+  Remove:   50 pizzas
+  Result:   49x Pizza in cart
+  
+Example 2: Customer wants smaller order
+  Initial:  20x Coffee in cart
+  Remove:   15 coffees
+  Result:   5x Coffee in cart
+  
+Example 3: Remove entire item
+  Initial:  10x Sandwich in cart
+  Remove:   10 sandwiches
+  Result:   Sandwich removed from cart
+
+
+VALIDATION & ERRORS
+-------------------
+
+❌ Cannot enter 0
+┌──────────────────────────────┐
+│  Input Error                 │
+│                              │
+│  Quantity must be greater    │
+│  than 0                      │
+│                              │
+│         [  OK  ]             │
+└──────────────────────────────┘
+
+❌ Cannot remove more than current quantity
+┌──────────────────────────────┐
+│  Input Error                 │
+│                              │
+│  Cannot remove more than     │
+│  current quantity (99)       │
+│                              │
+│         [  OK  ]             │
+└──────────────────────────────┘
+
+❌ Cannot enter text
+┌──────────────────────────────┐
+│  Input Error                 │
+│                              │
+│  Please enter a valid number │
+│                              │
+│         [  OK  ]             │
+└──────────────────────────────┘
+
+
+TIPS
+----
+
+✓ Press Cancel to abort removal
+✓ Default value is current quantity (remove all)
+✓ Edit the number to remove partial quantity
+✓ Total is automatically recalculated
+✓ Can remove multiple times from same item
+✓ Console logs show removal details (for debugging)
+
+
+KEYBOARD SHORTCUTS
+------------------
+
+When dialog is open:
+  • TAB       - Move to OK button
+  • ENTER     - Confirm removal
+  • ESC       - Cancel removal
+  • Backspace - Clear input field
+  • 0-9       - Enter quantity
+
+
+COMMON WORKFLOWS
+----------------
+
+Workflow 1: Reduce large order
+1. Customer orders 100x Pizza
+2. Realizes they only need 50
+3. Click Remove on Pizza
+4. Change 100 to 50
+5. Click OK
+→ Cart now has 50x Pizza
+
+Workflow 2: Remove in stages
+1. Cart has 99x Pizza
+2. Remove 30 → 69 remaining
+3. Remove 20 → 49 remaining
+4. Remove 49 → Pizza removed
+→ Flexible removal as needed
+
+Workflow 3: Correct mistake
+1. Accidentally added 999x Coffee
+2. Click Remove on Coffee
+3. Change 999 to 994
+4. Click OK
+→ Cart now has 5x Coffee
+
+
+TECHNICAL DETAILS
+-----------------
+
+• Feature added: December 3, 2024
+• Modified file: CashierController.java
+• Method: removeItemFromCart(Product item)
+• Dialog type: TextInputDialog (JavaFX)
+• Validation: Real-time input checking
+• Updates: Cart table + totals automatic
+
+
+TROUBLESHOOTING
+---------------
+
+Issue: Dialog doesn't appear
+→ Check if Remove button is enabled
+→ Ensure item is selected in cart
+
+Issue: Numbers not accepted
+→ Only digits 0-9 are valid
+→ No letters or special characters
+
+Issue: Total not updating
+→ This is automatic - if issue persists,
+   check console for errors
+
+
+═══════════════════════════════════════════════════════════════════
+                    END OF USER GUIDE
+═══════════════════════════════════════════════════════════════════

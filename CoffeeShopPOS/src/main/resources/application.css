@@ -1,0 +1,272 @@
+/* Full Black Theme for Coffee Shop POS */
+
+/* Remove all default padding and margins */
+* {
+    -fx-padding: 0;
+    -fx-spacing: 0;
+    -fx-margin: 0;
+}
+
+.root {
+    -fx-background-color: #000000;
+    -fx-base: #000000;
+    -fx-control-inner-background: #000000;
+    -fx-control-inner-background-alt: #000000;
+    -fx-padding: 0;
+    -fx-spacing: 0;
+    -fx-background-insets: 0;
+}
+
+/* Scene background */
+.scene {
+    -fx-background-color: #000000;
+    -fx-padding: 0;
+}
+
+/* VBox and HBox backgrounds */
+.v-box, .h-box {
+    -fx-background-color: #000000;
+    -fx-padding: 0;
+    -fx-spacing: 0;
+    -fx-background-insets: 0;
+}
+
+/* Remove padding from all panes */
+.pane, .region {
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+/* Text Colors */
+.label {
+    -fx-text-fill: #cccccc;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+    -fx-border-color: #333333;
+    -fx-border-width: 1px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2px;
+}
+
+/* Table Views */
+.table-view {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #000000;
+    -fx-padding: 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+    -fx-border-color: #333333;
+    -fx-padding: 5;
+}
+
+.table-row-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: #cccccc;
+}
+
+.table-cell {
+    -fx-text-fill: #cccccc;
+    -fx-border-color: #000000;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+    -fx-border-color: #333333;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #000000;
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #cccccc;
+}
+
+.combo-box .list-view {
+    -fx-background-color: #000000;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #333333;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: #cccccc;
+}
+
+/* TabPane */
+.tab-pane {
+    -fx-background-color: #000000;
+    -fx-tab-min-width: 0;
+    -fx-tab-max-width: Infinity;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #000000;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #000000;
+    -fx-background-insets: 0;
+}
+
+.tab {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+    -fx-background-insets: 0;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.tab:hover {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+}
+
+.tab:selected {
+    -fx-background-color: #000000;
+    -fx-text-fill: #3498db;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #3498db;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #cccccc;
+}
+
+.tab-content-area {
+    -fx-background-color: #000000;
+}
+
+/* ScrollBar */
+.scroll-bar {
+    -fx-background-color: #000000;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #333333;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #444444;
+}
+
+/* Buttons - Keep colorful but darker */
+.button {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.button:hover {
+    -fx-opacity: 0.8;
+}
+
+.button:pressed {
+    -fx-opacity: 0.6;
+}
+
+/* Dialogs and Alerts */
+.dialog-pane {
+    -fx-background-color: #000000;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #cccccc;
+}
+
+.alert {
+    -fx-background-color: #000000;
+}
+
+.alert .label {
+    -fx-text-fill: #cccccc;
+}
+
+.choice-dialog, .text-input-dialog {
+    -fx-background-color: #000000;
+}
+
+.choice-dialog .label, .text-input-dialog .label {
+    -fx-text-fill: #cccccc;
+}
+
+.date-picker {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+    -fx-border-color: #333333;
+}
+
+.date-picker .text-field {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+    -fx-border-color: #333333;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #000000;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #cccccc;
+}
+
+.date-picker-popup {
+    -fx-background-color: #000000;
+}
+
+.date-picker-popup .calendar-grid {
+    -fx-background-color: #000000;
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #cccccc;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #333333;
+}
+
+.date-picker-popup .day-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: #cccccc;
+}
