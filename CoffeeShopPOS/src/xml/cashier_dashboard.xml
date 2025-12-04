@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene>
+    <VBox spacing="0" style="-fx-padding: 0; -fx-background-color: #000000;" VBox.vgrow="ALWAYS">
+        <HBox spacing="10" style="-fx-padding: 5; -fx-background-color: #000000;">
+            <Label text="Cashier Dashboard - Mondalak Coffee" style="-fx-text-fill: #cccccc; -fx-font-size: 18; -fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="welcomeLabel" text="Welcome!" style="-fx-text-fill: #cccccc; -fx-font-size: 14;"/>
+            <Button text="Logout" fx:id="logoutButton" style="-fx-background-color: #e74c3c; -fx-text-fill: #cccccc;"/>
+        </HBox>
+        
+        <HBox spacing="20" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+            <!-- Products Section -->
+            <VBox spacing="5" HBox.hgrow="ALWAYS" style="-fx-padding: 5; -fx-background-color: #000000;">
+                <Label text="Available Products" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #cccccc;"/>
+                <TableView fx:id="productTable" VBox.vgrow="ALWAYS" style="-fx-background-color: #000000;"/>
+                
+                <HBox spacing="10">
+                    <TextField fx:id="searchField" promptText="Search products..." prefWidth="200" style="-fx-background-color: #000000; -fx-text-fill: #cccccc; -fx-border-color: #333333;"/>
+                    <Button fx:id="searchButton" text="Search" style="-fx-background-color: #3498db; -fx-text-fill: #cccccc;"/>
+                </HBox>
+            </VBox>
+            
+            <!-- Cart Section -->
+            <VBox spacing="5" HBox.hgrow="ALWAYS" style="-fx-padding: 5; -fx-background-color: #000000;">
+                <Label text="Shopping Cart" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #cccccc;"/>
+                <TableView fx:id="cartTable" VBox.vgrow="ALWAYS" style="-fx-background-color: #000000;"/>
+                
+                <HBox spacing="10">
+                    <TextField fx:id="productIdField" promptText="Product ID" prefWidth="100" style="-fx-background-color: #000000; -fx-text-fill: #cccccc; -fx-border-color: #333333;"/>
+                    <TextField fx:id="quantityField" promptText="Quantity" prefWidth="80" style="-fx-background-color: #000000; -fx-text-fill: #cccccc; -fx-border-color: #333333;"/>
+                    <Button fx:id="addToCartButton" text="Add to Cart" style="-fx-background-color: #2980b9; -fx-text-fill: #cccccc;"/>
+                </HBox>
+                
+                <VBox spacing="5" style="-fx-padding: 5; -fx-background-color: #000000; -fx-border-color: #333333; -fx-border-width: 1px;">
+                    <HBox spacing="10">
+                        <Label text="Total:" style="-fx-font-weight: bold; -fx-text-fill: #cccccc;"/>
+                        <Label fx:id="totalLabel" text="$0.00" style="-fx-font-weight: bold; -fx-text-fill: #cccccc;"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Promo Code:" style="-fx-font-weight: bold; -fx-text-fill: #cccccc;"/>
+                        <Label fx:id="promoCodeLabel" text="None" style="-fx-text-fill: #4ade80; -fx-font-weight: bold;"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Discount:" style="-fx-font-weight: bold; -fx-text-fill: #cccccc;"/>
+                        <Label fx:id="discountLabel" text="$0.00" style="-fx-text-fill: #cccccc;"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Label text="Final Total:" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #cccccc;"/>
+                        <Label fx:id="finalTotalLabel" text="$0.00" style="-fx-font-size: 16; -fx-text-fill: #4ade80; -fx-font-weight: bold;"/>
+                    </HBox>
+                </VBox>
+                
+                <HBox spacing="10">
+                    <Button fx:id="checkoutButton" text="Checkout" style="-fx-background-color: #27ae60; -fx-text-fill: #cccccc; -fx-font-weight: bold;"/>
+                    <Button fx:id="printReceiptButton" text="Print Receipt" style="-fx-background-color: #3498db; -fx-text-fill: #cccccc;"/>
+                    <Button fx:id="clearCartButton" text="Clear Cart" style="-fx-background-color: #e74c3c; -fx-text-fill: #cccccc;"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</Scene>
